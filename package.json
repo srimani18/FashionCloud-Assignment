@@ -1,0 +1,18 @@
+{
+  "name": "cache-api",
+  "version": "1.0.0",
+  "description": "a simple restapi which stores cache data ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "caching",
+    "redis",
+    "mongodb"
+  ],
+  "author": "Srimani Emani",
+  "license": "ISC"
+}
