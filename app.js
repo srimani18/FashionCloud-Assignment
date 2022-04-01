@@ -16,6 +16,6 @@ mongoose.connect(keys.MONGO_URI, {
   useNewUrlParser: true
 });
 
-require('./routes/articles')(app);
+require('./routes/data')(app);
 
 app.listen(port, () => console.log(`app is listening on port ${port}!`));

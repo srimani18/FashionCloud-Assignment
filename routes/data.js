@@ -6,12 +6,15 @@ module.exports = app => {
     const result = await Data.find().cache({ expire: 10 });
 
     res.json(result);
+    console.log('cached hit');
+
   });
 
   app.post('/api/allData', async (req, res) => {
     const { title, author, content } = req.body;
 
     if (!title || !author || !content) {
+      console.log('cache missed');
       return res.status(400).send('Missing title, author, or content')
     }
 
