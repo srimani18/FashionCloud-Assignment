@@ -4,7 +4,10 @@ const util = require('util');
 const keys = require('../configs/config')
 
 const client = redis.createClient(keys.REDIS_URL);
-client.hget = util.promisify(client.hget);
+
+client.hget = (discogsId) => {       
+  return client.hget(discogsId); 
+}
 
 // create reference for .exec
 const exec = mongoose.Query.prototype.exec;
